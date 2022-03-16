@@ -66,11 +66,15 @@ class _CalenderState extends State<CalenderPicker> {
 
     years = [];
 
+
+
     for(int i =1960; i <= DateTime.now().year; i++ ){
 
       years.add(i.toString());
     }
 
+
+ 
     var index = (years.length -1) - (DateTime.now().toUtc().year - widget.initialDate.year);
 
 
@@ -97,7 +101,11 @@ class _CalenderState extends State<CalenderPicker> {
     for(int i =1; i <= totalDaysInMonths; i++ ){
       days.add(i.toString());
     }
+
+
+    
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -179,6 +187,8 @@ class _CalenderState extends State<CalenderPicker> {
 
 
   }
+
+
 
 
   Widget cuperContainer({List<String> list,ValueChanged onValueChanged,FixedExtentScrollController scroll })=>Container(
